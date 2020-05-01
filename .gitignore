@@ -1,8 +1,9 @@
-/src/old/
-/src/mikepad/terminal/
-/src/redpois0n/
-/docs/
-/res/
-/bin/
-/target/
-/target/classes/old/
+src/old/
+src/mikepad/terminal/
+src/redpois0n/
+docs/
+res/
+bin/
+target/
+target/classes/old/
+.settings/
