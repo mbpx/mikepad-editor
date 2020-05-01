@@ -17,12 +17,12 @@ import javax.swing.JSeparator;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
-public class AboutDialog {
-	JDialog dialog;
-	JPanel panel;
-	JLabel link;
+public class EgoDialog {
+	private JDialog dialog;
+	private JPanel panel;
+	private JLabel link;
 
-	public AboutDialog(JFrame window) {
+	public EgoDialog(JFrame window) {
 		dialog = new JDialog(window, "Acerca de Mikepad");
 		dialog.setResizable(false);
 		panel = (JPanel) dialog.getContentPane();

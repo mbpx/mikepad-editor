@@ -176,7 +176,7 @@ public class Mikepad {
 		fileMenu.add(new AbstractAction("Acerca de") {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
-				new AboutDialog(window);
+				new EgoDialog(window);
 			}
 		});
 
