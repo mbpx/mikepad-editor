@@ -129,7 +129,7 @@ public class Mikepad {
 					try {
 						FileReader reader = new FileReader(editingFile.getFile());
 						editor.read(reader, "");
-
+						reader.close();
 					} catch (IOException ioex) {
 						ioex.printStackTrace();
 					}
@@ -147,6 +147,7 @@ public class Mikepad {
 					try {
 						FileWriter writer = new FileWriter(editingFile.getFile());
 						editor.write(writer);
+						writer.close();
 					} catch (IOException ioex) {
 						ioex.printStackTrace();
 					}
@@ -221,6 +222,7 @@ public class Mikepad {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				try {
+					System.out.println(editingFile.getDirectory());
 					ProcessBuilder builder = new ProcessBuilder("x-terminal-emulator");
 					String path;
 					if (editingFile != null) {
@@ -248,8 +250,7 @@ public class Mikepad {
 					writer.println(editingFile.getPath());
 					writer.println("read -rn1 && exit");
 					writer.close();
-					String[] args = new String[] { "x-terminal-emulator", "-e", "bash", "-rcfile",
-							run_script_path };
+					String[] args = new String[] { "x-terminal-emulator", "-e", "bash", "-rcfile", run_script_path };
 					ProcessBuilder builder = new ProcessBuilder(args);
 					builder.start();
 				} catch (IOException e) {

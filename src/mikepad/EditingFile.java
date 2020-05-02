@@ -15,15 +15,10 @@ public class EditingFile {
 
 		String path = file.getAbsolutePath();
 
-		if (file.isFile()) {
-			if (path.contains("/")) {
-				int index = 1 + path.lastIndexOf('/');
-				fileName = path.substring(index);
-				directory = path.substring(0, index);
-			}
-		} else {
-			fileName = path;
-			directory = path;
+		if (path.contains("/")) {
+			int index = 1 + path.lastIndexOf('/');
+			fileName = path.substring(index);
+			directory = path.substring(0, index);
 		}
 
 		try {
