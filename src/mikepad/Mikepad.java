@@ -71,7 +71,7 @@ public class Mikepad {
 
 	// Constantes de la aplicación
 	private final String app_name = "Mikepad";
-	private final String run_script_path = "src/mikepad/RunScript.sh";
+	private final String run_script_path = "src/scripts/RunScript.sh";
 
 	// Constructor.
 	public Mikepad() {
