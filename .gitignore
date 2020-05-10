@@ -7,5 +7,4 @@ bin/
 target/
 target/classes/old/
 .settings/
-src/mikepad/RunScript.sh
-
+src/scripts/RunScript.sh
